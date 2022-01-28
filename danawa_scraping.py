@@ -48,3 +48,6 @@ for page in tqdm_notebook(range(1, total_page + 1)):
             price = 0
         prod_data.append([title, spec_list, price])
     prod_data_total.append(prod_data)
+    df = pd.DataFrame(prod_data_total, columns = ['상품명', '제품정보' , '가격'])
+
+df.to_excel('danawa.xlsx', index=False)
